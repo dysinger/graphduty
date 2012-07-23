@@ -1,0 +1,21 @@
+{
+    "graphite": {
+        "url": "https://graphite.mycompany.com"
+    },
+    "pager_duty": {
+        "url" : "https://events.pagerduty.com/generic/2010-04-15",
+        "key": "3a3e10f0b73c012f7afe92000afa419f"
+    },
+    "rules": [
+        { "pattern"  : "x.*.y.z.*.jvm_pukage",
+          "operator" : ">",
+          "value"    : 0.9,
+          "period"   : "-1min",
+          "note"     : "Please call Mark if you cant figure it out in the first five minutes." },
+        { "pattern"  : "a.b.c.*.gas_level",
+          "operator" : "<",
+          "value"    : 0.31,
+          "period"   : "-1min",
+          "note"     : "Look here http://lolwiki.net/Answer but call Peter if you get stuck (808-212-5555)." }
+    ]
+}

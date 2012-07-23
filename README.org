@@ -1,0 +1,74 @@
+#+TITLE:  GraphDuty: Graphite Monitoring and Alerting with PagerDuty
+#+AUTHOR: Tim Dysinger <tim@dysinger.net>
+
+* Introduction
+
+  GraphDuty is a simple Haskell command line app to check Graphite and
+  report any alertable conditions to PagerDuty.  It is compiled
+  statically and you can build and distribute it like any other
+  command line binary compiled for your servers.  [Alternatively it
+  could be distributed via Git or Hackage.]
+
+* Quickstart
+
+*** [[Installing][Install]]
+
+*** Edit [[Configuration][config]]
+
+*** Run
+
+    #+BEGIN_SRC sh
+      graphduty -c /etc/my/path/to/config.json +RTS -N
+    #+END_SRC
+
+* Installing
+
+*** Install [[http://hackage.haskell.org/platform][Haskell Platform]]
+
+*** Update Cabal
+
+    #+BEGIN_SRC sh
+      cabal update
+    #+END_SRC
+
+*** Install GraphDuty
+
+    #+BEGIN_SRC sh
+      cd graphduty
+      cabal install
+    #+END_SRC
+
+* Configuration
+
+  The default config file is /etc/graphduty.json but you can also
+  specify the filename at the command line.  You may use JSON or YAML
+  for configuration.  Have a look at the example [[example.json][JSON]] or [[example.yaml][YAML]] file.
+
+* Open Source License [MIT]
+
+  Copyright (C) 2012 Knewton & Tim Dysinger <tim@dysinger.net>
+
+  Permission is hereby granted, free of charge, to any person
+  obtaining a copy of this software and associated documentation files
+  (the "Software"), to deal in the Software without restriction,
+  including without limitation the rights to use, copy, modify, merge,
+  publish, distribute, sublicense, and/or sell copies of the Software,
+  and to permit persons to whom the Software is furnished to do so,
+  subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be
+  included in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+  ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+
+* Todo
+
+*** TODO daemonizing - seems to exit right away and leave the pid file
+*** TODO attoparsec parsing of string data so we are sure it's correct
