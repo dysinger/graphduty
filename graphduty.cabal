@@ -32,5 +32,5 @@ executable            graphduty
                     , conduit      >= 0.5  && < 0.6
                     , http-conduit >= 1.5  && < 1.6
                     , remote       >= 0.1  && < 0.2
-                    , transformers >= 0.3  && < 0.4
+                    , transformers >= 0.2  && < 0.4
                     , yaml         >= 0.8  && < 0.9
