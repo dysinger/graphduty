@@ -11,8 +11,8 @@ import           GraphDuty.Types
 loadConfig :: FilePath -> IO (Maybe Cfg)
 loadConfig fp =
   let fileBS = CB.pack $ map toLower fp
-    in if ".json" `CB.isInfixOf` fileBS
+    in if ".j" `CB.isInfixOf` fileBS
        then return . A.decode =<< LB.readFile fp
-       else if ".yaml" `CB.isInfixOf` fileBS || ".yml" `CB.isInfixOf` fileBS
+       else if ".y" `CB.isInfixOf` fileBS
             then return . Y.decode =<< B.readFile fp
             else return Nothing
