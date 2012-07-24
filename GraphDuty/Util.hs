@@ -4,9 +4,9 @@ import Data.Char
 
 camelToSnake :: String -> String
 camelToSnake [] = []
-camelToSnake (x:xs) = toLower x : go xs
+camelToSnake (x:xs) = toLower x : snake xs
   where
-    go [] = []
-    go (y:ys)
-      | isUpper y = '_' : toLower y : go ys
-      | otherwise = y : go ys
+    snake [] = []
+    snake (y:ys)
+      | isUpper y = '_' : toLower y : snake ys
+      | otherwise = y : snake ys
