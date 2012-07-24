@@ -13,7 +13,7 @@ loadConfig fp =
   let file = map toLower fp
       fileBS = CB.pack file
     in if ".json" `CB.isInfixOf` fileBS
-       then return . A.decode =<< LB.readFile file
+       then return . A.decode =<< LB.readFile fp
        else if ".yaml" `CB.isInfixOf` fileBS || ".yml" `CB.isInfixOf` fileBS
-            then return . Y.decode =<< B.readFile file
+            then return . Y.decode =<< B.readFile fp
             else return Nothing
