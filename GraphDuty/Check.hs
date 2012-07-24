@@ -48,9 +48,9 @@ checkMetric cfg@(Cfg {..}) rule@(Rule {..}) metric@(Metric {..}) = do
 check :: Check -> ProcessM ()
 check (Check {..}) = do
   say $ "Checking " ++ rulePattern checkRule
-  let url  = gCfgUrl (cfgGraphite checkCfg)
-             ++ "/render/?target=" ++ (rulePattern checkRule)
-             ++ "&from=" ++ (rulePeriod checkRule) ++ "&format=json"
+  let url = gCfgUrl (cfgGraphite checkCfg)
+            ++ "/render/?target=" ++ (rulePattern checkRule)
+            ++ "&from=" ++ (rulePeriod checkRule) ++ "&format=json"
   metricsResult <- liftIO $ getMetrics url
   case metricsResult of
     Just ms -> mapM_ (\m -> checkMetric checkCfg checkRule m) ms
