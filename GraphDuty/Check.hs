@@ -20,10 +20,14 @@ sendAlert (Cfg {..}) (Rule {..}) (Metric {..}) = do
                                                 ++ ruleOperator
                                                 ++ " "
                                                 ++ show ruleValue
-                                                ++ "\n\n"
+                                                ++ " Graph: "
+                                                ++ graphUrl
+                                                ++ " Note: "
                                                 ++ ruleNote }
-      url = pdCfgUrl cfgPagerDuty ++ "/create_event.json"
-  request <- liftIO $ C.parseUrl url
+      alertUrl = pdCfgUrl cfgPagerDuty ++ "/create_event.json"
+      graphUrl = gCfgUrl cfgGraphite
+                 ++ "?target=" ++ metricTarget
+  request <- liftIO $ C.parseUrl alertUrl
   let post = request { C.method = "POST"
                      , C.requestBody = C.RequestBodyLBS alert }
   liftIO $ C.runResourceT $ C.withManager $ \m -> C.http post m >> return ()
