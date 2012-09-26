@@ -29,13 +29,13 @@ executable            graphduty
                       -rtsopts
                       -static
                       -threaded
-  build-depends:      base         >= 4.3  && < 4.6
-                    , aeson        >= 0.6  && < 0.7
-                    , binary       >= 0.5  && < 0.6
-                    , bytestring   >= 0.9  && < 0.10
-                    , cmdargs      >= 0.9  && < 0.10
-                    , conduit      >= 0.5  && < 0.6
-                    , http-conduit >= 1.5  && < 1.6
-                    , remote       >= 0.1  && < 0.2
-                    , transformers >= 0.2  && < 0.4
-                    , yaml         >= 0.8  && < 0.9
+  build-depends:      base
+                    , aeson
+                    , binary
+                    , bytestring
+                    , cmdargs
+                    , conduit
+                    , http-conduit
+                    , remote
+                    , transformers
+                    , yaml
