@@ -43,8 +43,3 @@
   The default config file is /etc/graphduty.json but you can also
   specify the filename at the command line.  You may use JSON or YAML
   for configuration.  Have a look at the example [[example.json][JSON]] or [[example.yaml][YAML]] file.
-
-* Todo
-
-*** TODO daemonizing - seems to exit right away and leave the pid file
-*** TODO attoparsec parsing of string data so we are sure it's correct
