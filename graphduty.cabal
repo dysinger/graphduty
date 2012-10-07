@@ -2,7 +2,7 @@ name:                   graphduty
 version:                0.1.1.999
 synopsis:               Graphite Monitoring with Alerting to PagerDuty
 homepage:               http://github.com/dysinger/graphduty
-license:                MIT
+license:                Apache-2.0
 license-file:           README.org
 author:                 Tim Dysinger <tim@dysinger.net>
 maintainer:             Tim Dysinger <tim@dysinger.net>
