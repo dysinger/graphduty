@@ -23,6 +23,7 @@ executable              graphduty
                         RecordWildCards
                         TemplateHaskell
   ghc-options:          -Wall
+                        -fllvm
                         -rtsopts
                         -static
                         -threaded
