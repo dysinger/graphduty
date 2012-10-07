@@ -4,8 +4,8 @@ synopsis:               Graphite Monitoring with Alerting to PagerDuty
 homepage:               http://github.com/dysinger/graphduty
 license:                Apache-2.0
 license-file:           README.org
-author:                 Tim Dysinger <tim@dysinger.net>
-maintainer:             Tim Dysinger <tim@dysinger.net>
+author:                 Tim Dysinger <tim@knewton.com>
+maintainer:             Tim Dysinger <tim@knewton.com>
 category:               System
 build-type:             Simple
 cabal-version:          >=1.16

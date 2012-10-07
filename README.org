@@ -1,5 +1,5 @@
 #+TITLE:  GraphDuty: Graphite Monitoring and Alerting with PagerDuty
-#+AUTHOR: Tim Dysinger <tim@dysinger.net>
+#+AUTHOR: Tim Dysinger <tim@knewton.com>
 
 * Introduction
 
