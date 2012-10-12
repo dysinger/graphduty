@@ -11,17 +11,12 @@ build-type:             Simple
 cabal-version:          >=1.16
 
 executable              graphduty
-  hs-source-dirs:       src
-  main-is:              Main.hs
-  other-modules:        GraphDuty.Check
-                      , GraphDuty.Config
-                      , GraphDuty.Dispatch
-                      , GraphDuty.Types
-                      , GraphDuty.Util
   default-language:     Haskell2010
-  default-extensions:   DeriveDataTypeable
+  default-extensions:   BangPatterns
+                        DeriveDataTypeable
                         ExtendedDefaultRules
                         OverloadedStrings
+                        RankNTypes
                         RecordWildCards
                         TemplateHaskell
   ghc-options:          -Wall
@@ -29,12 +24,20 @@ executable              graphduty
                         -rtsopts
                         -static
                         -threaded
+  hs-source-dirs:       src
+  main-is:              Main.hs
+  other-modules:        GraphDuty.Check
+                      , GraphDuty.Config
+                      , GraphDuty.Dispatch
+                      , GraphDuty.Types
+                      , GraphDuty.Util
   build-depends:        base >=4.6
                       , aeson
                       , binary
                       , bytestring
                       , cmdargs
                       , conduit
+                      , derive
                       , http-conduit
                       , remote
                       , transformers
