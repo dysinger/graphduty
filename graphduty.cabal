@@ -45,7 +45,8 @@ executable              graphduty
 
 executable              test
   default-language:     Haskell2010
-  default-extensions:   TemplateHaskell
+  default-extensions:   RankNTypes
+                        TemplateHaskell
   ghc-options:          -Wall -fllvm -rtsopts -threaded
   hs-source-dirs:       src
   main-is:              Test.hs
