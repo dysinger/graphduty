@@ -35,13 +35,6 @@ prop_sort4 xs ys =
         (head (sort (xs ++ ys)) == min (minimum xs) (minimum ys))
   where _types = (xs :: [Int], ys :: [Int])
 
-prop_sort5 :: [Int] -> [Int] -> Property
-prop_sort5 xs ys =
-        (not (null xs)) ==>
-        (not (null ys)) ==>
-        (head (sort (xs ++ ys)) == max (maximum xs) (maximum ys))
-  where _types = (xs :: [Int], ys :: [Int])
-
 -- HUnit
 
 test_sort7 :: Assertion
