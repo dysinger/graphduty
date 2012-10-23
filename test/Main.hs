@@ -46,6 +46,3 @@ prop_sort5 xs ys =
 
 test_sort7 :: Assertion
 test_sort7 = sort [8, 7, 2, 5, 4, 9, 6, 1, 0, 3] @?= ([0..9] :: [Integer])
-
-test_sort8 :: forall t. t
-test_sort8 = error "This test deliberately contains a user error"
