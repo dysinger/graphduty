@@ -2,6 +2,7 @@
 {-# LANGUAGE RankNTypes      #-}
 
 import Data.List
+import Test.Framework.Providers.HUnit
 import Test.Framework.Providers.QuickCheck2
 import Test.Framework.TH
 import Test.HUnit
