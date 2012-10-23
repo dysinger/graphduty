@@ -49,8 +49,8 @@ executable              test
   default-extensions:   RankNTypes
                         TemplateHaskell
   ghc-options:          -Wall -fllvm -rtsopts -threaded
-  hs-source-dirs:       src
-  main-is:              Test.hs
+  hs-source-dirs:       test
+  main-is:              Main.hs
   build-depends:        base >=4.6
                       , HUnit
                       , QuickCheck
