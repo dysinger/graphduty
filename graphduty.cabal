@@ -19,7 +19,8 @@ executable              graphduty
                         RankNTypes
                         RecordWildCards
                         TemplateHaskell
-  ghc-options:          -Wall
+  ghc-options:          -O2
+                        -Wall
                         -fllvm
                         -rtsopts
                         -static
